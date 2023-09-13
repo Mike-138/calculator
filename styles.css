@@ -1,0 +1,35 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    background-color: beige;
+}
+
+.calculator-body {
+    box-sizing: content-box;
+    width: 600px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 2px solid black;
+}
+
+.calculator-result, .operation-container, .calculator-contents {
+    box-sizing: content-box;
+    display: flex;
+    height: 100px;
+    border: 1px solid black;
+}

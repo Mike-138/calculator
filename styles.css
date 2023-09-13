@@ -5,6 +5,8 @@ html {
 
 *, *::before, *::after {
     box-sizing: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
     margin: 0;
     padding: 0;
 }
@@ -30,8 +32,15 @@ body {
 .calculator-result, .operation-container, .calculator-contents {
     box-sizing: content-box;
     display: flex;
+    justify-content: flex-end;
     height: 100px;
     border: 1px solid black;
+}
+
+.calculator-result {
+    font-size: 80px;
+    padding-right: 20px;
+    align-items: center;
 }
 
 .operation-container {
@@ -40,27 +49,29 @@ body {
 }
 
 .operation {
+    font-size: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 2;
+    flex-grow: 7;
     border: 1px solid black;
 }
 
 .calculator-contents {
     height: auto;
+    font-size: 40px;
     gap: 16px;
 }
 
-.number-container {
+.digit-container {
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 3;
+    flex-grow: 1;
     gap: 16px;
     border: 1px solid black;
 }
 
-.number {
+.digit {
     height: 100px;
     display: flex;
     justify-content: center;
@@ -70,5 +81,6 @@ body {
 }
 
 .clear {
-    flex-grow: 90;
+    font-size: 40px;
+    flex-grow: 80;
 }

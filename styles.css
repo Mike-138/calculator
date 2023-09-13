@@ -42,6 +42,8 @@ body {
     font-size: 80px;
     padding-right: 20px;
     align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
     user-select: text;
 }
 

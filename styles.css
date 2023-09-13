@@ -33,3 +33,38 @@ body {
     height: 100px;
     border: 1px solid black;
 }
+
+.operation-container {
+    justify-content: space-evenly;
+    gap: 16px;
+}
+
+.operation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    border: 1px solid black;
+}
+
+.calculator-contents {
+    height: auto;
+    gap: 16px;
+}
+
+.number-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 3;
+    gap: 16px;
+    border: 1px solid black;
+}
+
+.number {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 calc(33.333% - 16px);
+    border: 1px solid black;
+}

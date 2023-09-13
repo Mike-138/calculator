@@ -9,6 +9,7 @@ html {
     font-weight: bolder;
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 body {
@@ -41,6 +42,7 @@ body {
     font-size: 80px;
     padding-right: 20px;
     align-items: center;
+    user-select: text;
 }
 
 .operation-container {

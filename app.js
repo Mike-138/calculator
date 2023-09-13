@@ -9,3 +9,13 @@ calculatorDigits.forEach((digit) => {
         calculatorResult.textContent += digit.textContent;
     });
 });
+
+calculatorOperations.forEach((operation) => {
+    operation.addEventListener("click", (event) => {
+        calculatorResult.textContent += " " + operation.textContent + " ";
+    });
+});
+
+calculatorClear.addEventListener("click", () => {
+    calculatorResult.textContent = "";
+});

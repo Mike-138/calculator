@@ -43,7 +43,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    flex-grow: 2;
     border: 1px solid black;
 }
 
@@ -65,6 +65,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1 1 calc(33.333% - 16px);
+    flex: 1 1 calc(33.33333333% - 16px);
     border: 1px solid black;
+}
+
+.clear {
+    flex-grow: 90;
 }

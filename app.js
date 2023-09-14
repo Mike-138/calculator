@@ -4,6 +4,26 @@ const calculatorEval = document.querySelector(".calculator-contents > .operation
 const calculatorDigits = document.querySelectorAll(".digit");
 const calculatorClear = document.querySelector(".clear");
 
+function operate() {
+    let expression = calculatorResult.textContent.split(" ");
+    switch (expression[1]) {
+        case "+":
+            calculatorResult.textContent = Number(expression[0]) + Number(expression[2]);
+            break;
+        case "−":
+            calculatorResult.textContent = Number(expression[0]) - Number(expression[2]);
+            break;
+        case "×":
+            calculatorResult.textContent = Number(expression[0]) * Number(expression[2]);
+            break;
+        case "÷":
+            calculatorResult.textContent = Number(expression[0]) / Number(expression[2]);
+            break;
+        default:
+            calculatorResult.textContent = "Error";
+    }
+}
+
 calculatorDigits.forEach((digit) => {
     digit.addEventListener("click", () => {
         calculatorResult.textContent += digit.textContent;
@@ -12,6 +32,9 @@ calculatorDigits.forEach((digit) => {
 
 calculatorOperations.forEach((operation) => {
     operation.addEventListener("click", (event) => {
+        if (calculatorResult.textContent.search(" ") !== -1) {
+            operate();
+        }
         calculatorResult.textContent += " " + operation.textContent + " ";
     });
 });
@@ -19,3 +42,7 @@ calculatorOperations.forEach((operation) => {
 calculatorClear.addEventListener("click", () => {
     calculatorResult.textContent = "";
 });
+
+calculatorEval.addEventListener("click", () => {
+    operate();
+})

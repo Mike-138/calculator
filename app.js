@@ -36,7 +36,7 @@ calculatorDigits.forEach((digit) => {
 });
 
 calculatorOperations.forEach((operation) => {
-    operation.addEventListener("click", (event) => {
+    operation.addEventListener("click", () => {
         if (calculatorResult.textContent) {
             if (calculatorResult.textContent.search(" ") !== -1) {
                 operate();

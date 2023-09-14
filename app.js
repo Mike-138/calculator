@@ -37,11 +37,13 @@ calculatorDigits.forEach((digit) => {
 
 calculatorOperations.forEach((operation) => {
     operation.addEventListener("click", (event) => {
-        if (calculatorResult.textContent.search(" ") !== -1) {
-            operate();
-        }
-        if (calculatorResult.textContent !== "Error") {
-            calculatorResult.textContent += " " + operation.textContent + " ";
+        if (calculatorResult.textContent) {
+            if (calculatorResult.textContent.search(" ") !== -1) {
+                operate();
+            }
+            if (calculatorResult.textContent !== "Error") {
+                calculatorResult.textContent += " " + operation.textContent + " ";
+            }
         }
     });
 });

@@ -1,6 +1,16 @@
 html {
     box-sizing: border-box;
     height: 100%;
+    --s: 160px; /* control the size */
+    --c1: #AACCB1;
+    --c2: #D3E2B6;
+    background:
+      conic-gradient(at 25% 25%,#0000 75%,var(--c1) 0)
+       0 calc(3*var(--s)/4),
+      conic-gradient(#0000 75%,var(--c2) 0) 
+       calc(var(--s)/-8) calc(5*var(--s)/8),
+      conic-gradient(at 25% 75%,var(--c1) 25%,var(--c2) 0);
+    background-size: var(--s) var(--s);
 }
 
 *, *::before, *::after {
@@ -17,7 +27,6 @@ body {
     justify-content: center;
     align-items: center;
     height: inherit;
-    background-color: beige;
 }
 
 .calculator-body {
@@ -27,6 +36,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    background-color: beige;
     border: 2px solid black;
 }
 
@@ -35,13 +45,15 @@ body {
     display: flex;
     justify-content: flex-end;
     height: 100px;
-    border: 1px solid black;
 }
 
 .calculator-result {
     font-size: 80px;
     padding-right: 20px;
     align-items: center;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
     white-space: nowrap;
     overflow: hidden;
     user-select: text;
@@ -57,7 +69,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 7;
+    flex-grow: 6;
+    background-color: cadetblue;
     border: 1px solid black;
 }
 
@@ -71,7 +84,6 @@ body {
     flex-wrap: wrap;
     flex-grow: 1;
     gap: 16px;
-    border: 1px solid black;
 }
 
 .digit {
@@ -81,10 +93,20 @@ body {
     justify-content: center;
     align-items: center;
     flex: 1 1 calc(33.33333333% - 16px);
+    background-color: lightslategray;
     border: 1px solid black;
 }
 
 .clear {
     font-size: 40px;
     flex-grow: 80;
+    background-color: brown;
+}
+
+.eval {
+    background-color: darkolivegreen;
+}
+
+button {
+    border-radius: 10px;
 }

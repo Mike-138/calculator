@@ -17,7 +17,7 @@ function operate() {
             calculatorResult.textContent = Number(expression[0]) * Number(expression[2]);
             break;
         case "÷":
-            calculatorResult.textContent = Number(expression[0]) / Number(expression[2]);
+            calculatorResult.textContent = Math.round((Number(expression[0]) / Number(expression[2]) + Number.EPSILON) * 1_000_000) / 1_000_000;
             break;
         default:
             calculatorResult.textContent = "Error";

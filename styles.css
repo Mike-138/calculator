@@ -111,6 +111,10 @@ button {
     border-radius: 10px;
 }
 
+button:hover {
+    transform: scale(1.02);
+}
+
 button:active {
-    transform: scale(0.98);
+    transform: scale(0.99);
 }

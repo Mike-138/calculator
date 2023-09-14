@@ -63,7 +63,6 @@ body {
 
 .calculator-contents {
     height: auto;
-    font-size: 40px;
     gap: 16px;
 }
 
@@ -77,6 +76,7 @@ body {
 
 .digit {
     height: 100px;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;

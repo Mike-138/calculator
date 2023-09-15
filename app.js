@@ -4,31 +4,6 @@ const calculatorEval = document.querySelector(".calculator-contents > .operation
 const calculatorDigits = document.querySelectorAll(".digit");
 const calculatorClear = document.querySelector(".clear");
 
-function operate() {
-    let expression = calculatorResult.textContent.split(" ");
-    console.log(expression);
-    if (expression.includes("")) {
-        calculatorResult.textContent = "Error";
-    } else {
-        switch (expression[1]) {
-            case "+":
-                calculatorResult.textContent = Number(expression[0]) + Number(expression[2]);
-                break;
-            case "−":
-                calculatorResult.textContent = Number(expression[0]) - Number(expression[2]);
-                break;
-            case "×":
-                calculatorResult.textContent = Number(expression[0]) * Number(expression[2]);
-                break;
-            case "÷":
-                calculatorResult.textContent = Math.round((Number(expression[0]) / Number(expression[2]) + Number.EPSILON) * 1_000_000) / 1_000_000;
-                break;
-            default:
-                calculatorResult.textContent = "Error";
-        }
-    }
-}
-
 calculatorDigits.forEach((digit) => {
     digit.addEventListener("click", () => {
         calculatorResult.textContent += digit.textContent;
@@ -55,3 +30,28 @@ calculatorClear.addEventListener("click", () => {
 calculatorEval.addEventListener("click", () => {
     operate();
 })
+
+function operate() {
+    let expression = calculatorResult.textContent.split(" ");
+    console.log(expression);
+    if (expression.includes("")) {
+        calculatorResult.textContent = "Error";
+    } else {
+        switch (expression[1]) {
+            case "+":
+                calculatorResult.textContent = Number(expression[0]) + Number(expression[2]);
+                break;
+            case "−":
+                calculatorResult.textContent = Number(expression[0]) - Number(expression[2]);
+                break;
+            case "×":
+                calculatorResult.textContent = Number(expression[0]) * Number(expression[2]);
+                break;
+            case "÷":
+                calculatorResult.textContent = Math.round((Number(expression[0]) / Number(expression[2]) + Number.EPSILON) * 1_000_000) / 1_000_000;
+                break;
+            default:
+                calculatorResult.textContent = "Error";
+        }
+    }
+}
